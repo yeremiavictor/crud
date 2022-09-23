@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import { auth } from "./config/firebase";
+import { onAuthStateChanged } from "firebase/auth";
+import { BrowserRouter, Routes,  Route, Navigate } from "react-router-dom";
+import Login from "./components/auth/Login";
+import Navbar from "./components/layouts/Navbar";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [user, setUser] = useState({})
+
+    onAuthStateChanged(auth, (currentUser)=> {
+        setUser(currentUser)
+    })
+
+    try{
+        if(user.email){
+            return(
+                <BrowserRouter>
+                    <Routes>
+                        <Route path='/' element={<Navbar/>}/>
+                    </Routes>
+                </BrowserRouter>
+            )
+        }
+    }catch(err){
+        return(
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<Login/>}/>
+                    
+                </Routes>
+            </BrowserRouter>
+        )
+
+    }
 }
 
 export default App;
