@@ -10,7 +10,7 @@ export default function Navbar() {
 
     const logout = async() => {
         await signOut(auth)
-        navigate('/login')
+        navigate('/')
     }
 
     return (
