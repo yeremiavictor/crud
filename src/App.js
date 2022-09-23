@@ -4,6 +4,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { BrowserRouter, Routes,  Route, Navigate } from "react-router-dom";
 import Login from "./components/auth/Login";
 import Navbar from "./components/layouts/Navbar";
+import Register from "./components/auth/Register";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path='/' element={<Login/>}/>
+                    <Route path='/Register' element={<Register/>}/>
                     <Route path='*' element={<Login/>}/>
                     
                 </Routes>
