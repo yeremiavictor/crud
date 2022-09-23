@@ -38,7 +38,7 @@ function Register(){
                 navigate('/')
             }
         }catch(err){
-            setMsg('Anda tidak dapat melakukan pendaftaran')
+            setMsg('Anda tidak dapat melakukan pendaftaran, password / email tidak valid')
         }
     }
 
