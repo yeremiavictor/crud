@@ -19,6 +19,7 @@ function App() {
                 <BrowserRouter>
                     <Routes>
                         <Route path='/' element={<Navbar/>}/>
+                        <Route path='*' element={<Navbar/>}/>
                     </Routes>
                 </BrowserRouter>
             )
@@ -28,6 +29,7 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path='/' element={<Login/>}/>
+                    <Route path='*' element={<Login/>}/>
                     
                 </Routes>
             </BrowserRouter>
