@@ -5,6 +5,7 @@ import { BrowserRouter, Routes,  Route, Navigate } from "react-router-dom";
 import Login from "./components/auth/Login";
 import Navbar from "./components/layouts/Navbar";
 import Register from "./components/auth/Register";
+import ForgotPass from "./components/auth/ForgotPass";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                 <Routes>
                     <Route path='/' element={<Login/>}/>
                     <Route path='/Register' element={<Register/>}/>
+                    <Route path='/forgot-password' element={<ForgotPass/>}/>
                     <Route path='*' element={<Login/>}/>
                     
                 </Routes>
