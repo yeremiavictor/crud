@@ -6,6 +6,7 @@ import Login from "./components/auth/Login";
 import Navbar from "./components/layouts/Navbar";
 import Register from "./components/auth/Register";
 import ForgotPass from "./components/auth/ForgotPass";
+import Add from "./components/camaba/Add";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
                 <BrowserRouter>
                     <Routes>
                         <Route path='/' element={<Navbar/>}/>
+                        <Route path='/add' element={<Add/>}/>
                         <Route path='*' element={<Navbar/>}/>
                     </Routes>
                 </BrowserRouter>
