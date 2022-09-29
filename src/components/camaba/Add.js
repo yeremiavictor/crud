@@ -17,7 +17,7 @@ export default function Add(){
             const docRef = await addDoc(collection(db, 'spmb'),{
                 idMaba, nama, prodi
             })
-            console.log('Dokumen berhasl dibuat dengan ID: ', docRef.idMaba)
+            console.log('Dokumen berhasl dibuat dengan ID: ', docRef.id)
             navigate('/')
         }catch(err){
             console.log("gagal mendambahkan dokumen ", err)
