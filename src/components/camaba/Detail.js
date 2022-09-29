@@ -1,12 +1,11 @@
 import React, {useState,useEffect} from 'react'
 import { db } from '../../config/firebase'
 import {doc, getDoc} from 'firebase/firestore'
-import { useNavigate, useParams, Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import Navbar from '../layouts/Navbar'
 import Footer from '../layouts/Footer'
 
 export default function Detail(){
-    const navigate = useNavigate()
     const {id} = useParams()
 
     const [idMaba, setIdMaba] = useState()

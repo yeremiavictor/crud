@@ -28,10 +28,7 @@ function ForgotPass(){
             console.log(user)
         } catch(err){
             console.log(err.message)
-            if(err. message){
-                setMsg('email tidak terdaftar')
-            }
-            
+            setMsg('email tidak terdaftar')          
             alert('Fitur belum diaktifkan')
         }
     }

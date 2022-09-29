@@ -1,16 +1,14 @@
 import React, {useState, useEffect} from 'react'
 import { db } from '../../config/firebase'
 import { collection, doc, getDocs, deleteDoc, query } from 'firebase/firestore'
-import { useNavigate, useParams, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGear, faEye, faTrash } from '@fortawesome/free-solid-svg-icons'
 import Navbar from '../layouts/Navbar'
 import Footer from '../layouts/Footer'
-import { async } from '@firebase/util'
 
 //getAlldata
 function List(){
-    const navigate = useNavigate
     const [data, setData] = useState([])
     const dataCollectionRef = query(collection(db, 'spmb'))
 

@@ -1,9 +1,8 @@
 import React, {useState} from "react";
 import { auth } from "./config/firebase";
 import { onAuthStateChanged } from "firebase/auth";
-import { BrowserRouter, Routes,  Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes,  Route } from "react-router-dom";
 import Login from "./components/auth/Login";
-import Navbar from "./components/layouts/Navbar";
 import Register from "./components/auth/Register";
 import ForgotPass from "./components/auth/ForgotPass";
 import Add from "./components/camaba/Add";
