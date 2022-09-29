@@ -8,16 +8,16 @@ import Footer from '../layouts/Footer'
 export default function Add(){
     //create const
     const navigate = useNavigate()
-    const[id,setId] = useState('')
+    const[idMaba,setIdMaba] = useState('')
     const[nama, setNama] = useState('')
     const[prodi, setProdi] = useState('')
 
     const add = async() => {
         try{
             const docRef = await addDoc(collection(db, 'spmb'),{
-                id, nama, prodi
+                idMaba, nama, prodi
             })
-            console.log('Dokumen berhasl dibuat dengan ID: ', docRef.id)
+            console.log('Dokumen berhasl dibuat dengan ID: ', docRef.idMaba)
             navigate('/')
         }catch(err){
             console.log("gagal mendambahkan dokumen ", err)
@@ -53,7 +53,7 @@ export default function Add(){
                                         required
                                         className="input" 
                                         placeholder='ID'
-                                        onChange = {(event)=> {setId(event.target.value)}}
+                                        onChange = {(event)=> {setIdMaba(event.target.value)}}
                                     />
                                 </div>
                             </div>
