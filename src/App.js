@@ -7,6 +7,9 @@ import Navbar from "./components/layouts/Navbar";
 import Register from "./components/auth/Register";
 import ForgotPass from "./components/auth/ForgotPass";
 import Add from "./components/camaba/Add";
+import Detail from "./components/camaba/Detail";
+import List from "./components/camaba/List";
+import Edit from "./components/camaba/Edit";
 
 
 function App() {
@@ -21,9 +24,11 @@ function App() {
             return(
                 <BrowserRouter>
                     <Routes>
-                        <Route path='/' element={<Navbar/>}/>
+                        <Route path='/' element={<List/>}/>
                         <Route path='/add' element={<Add/>}/>
-                        <Route path='*' element={<Navbar/>}/>
+                        <Route path='/detail/:id' element={<Detail/>}/>
+                        <Route path='/edit/:id' element={<Edit/>}/>
+                        <Route path='*' element={<List/>}/>
                     </Routes>
                 </BrowserRouter>
             )
